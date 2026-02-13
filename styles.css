@@ -111,10 +111,11 @@ ul {
     padding: 0 20px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.hero-content h1 {
+    text-align: center;
+    margin: 0 auto;
 }
+
 
 .seo-subtitle {
     font-size: 1.3rem;
