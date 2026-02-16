@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://hotel-diva-semana-santa.netlify.app/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
