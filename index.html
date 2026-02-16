@@ -175,7 +175,7 @@
 
 <nav class="navbar">
   <div class="nav-container">
-    <div class="logo" aria-label="Hotel Diva Mar del Plata">Hotel Diva</div>
+    <a href="https://diva-hotel-mar-del-plata.netlify.app/" class="logo" aria-label="Hotel Diva Mar del Plata">Hotel Diva</a>
     <a href="#reserva" class="nav-btn" aria-label="Ir al formulario de reserva">Reservar Ahora</a>
   </div>
 </nav>
@@ -285,11 +285,66 @@
   </section>
 </main>
 
-<footer>
-  <div class="footer-inner">
-    <p>Hotel Diva · Garay 1630 · Mar del Plata · Buenos Aires</p>
-    <p><a href="https://wa.me/5492235033585">WhatsApp +54 9 2235 03-3585</a></p>
-    <p>© 2026 Hotel Diva</p>
+<footer class="footer" aria-label="Pie de página del Hotel Diva">
+  <div class="footer-container">
+    <div class="footer-grid">
+      
+      <!-- Hotel Info -->
+      <div class="footer-section">
+        <h2>Hotel Diva</h2>
+        <p>Tu hogar lejos de casa en Mar del Plata. Comodidad, elegancia y atención personalizada.</p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <div class="footer-links">
+          <a href="tel:+5492235033585" class="footer-link">
+            <span>📞</span>
+            <span>+54 9 2235 03-3585</span>
+          </a>
+          <a href="mailto:info@hoteldiva.com.ar" class="footer-link">
+            <span>✉️</span>
+            <span>info@hoteldiva.com.ar</span>
+          </a>
+          <div class="footer-link">
+            <span>📍</span>
+            <span>Garay 1630 · Mar del Plata · Buenos Aires</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <div class="footer-links">
+          <a href="https://diva-hotel-mar-del-plata.netlify.app/" class="footer-link-btn">Página Principal</a>
+          <button class="footer-link-btn" onclick="document.getElementById('opciones-habitaciones').scrollIntoView({behavior:'smooth'})">Habitaciones</button>
+          <button class="footer-link-btn" onclick="document.getElementById('reserva').scrollIntoView({behavior:'smooth'})">Reserva</button>
+          <a href="https://cosapro-hoteldiva.netlify.app/" class="footer-link-btn">Evento Cosapro</a>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/hoteldivamdp/" aria-label="Instagram de Hotel Diva" class="social-icon" target="_blank">
+            📷
+          </a>
+          <a href="https://www.facebook.com/hoteldivamdp" aria-label="Facebook de Hotel Diva" class="social-icon" target="_blank">
+            f
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Hotel Diva. Todos los derechos reservados.</p>
+      <p>Desarrollado con ❤️ para brindar la mejor experiencia</p>
+    </div>
   </div>
 </footer>
 
