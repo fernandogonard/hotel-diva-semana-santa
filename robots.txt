@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hotel-diva-semana-santa.netlify.app/sitemap.xml

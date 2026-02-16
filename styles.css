@@ -232,6 +232,28 @@ form {
     flex-direction: column;
     gap: 15px;
 }
+.reserva {
+  text-align: center;
+}
+#reservaForm {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: left; /* importante para que los labels queden bien */
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.reserva h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.reserva p {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
 form label {
     font-weight: bold;
