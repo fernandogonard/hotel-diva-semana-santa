@@ -36,6 +36,15 @@
 
     <link rel="stylesheet" href="styles.css" />
 
+    <!-- Preload hero para LCP rápido -->
+    <link
+      rel="preload"
+      as="image"
+      href="hero-1280.webp"
+      imagesrcset="hero-640.webp 640w, hero-960.webp 960w, hero-1280.webp 1280w, hero-1920.webp 1920w"
+      imagesizes="100vw"
+    />
+
     <!-- Open Graph -->
     <meta
       property="og:title"
@@ -52,9 +61,26 @@
     />
     <meta
       property="og:image"
-      content="https://hotel-diva-semana-santa.netlify.app/hero.webp"
+      content="https://hotel-diva-semana-santa.netlify.app/hero-1280.webp"
     />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
     <meta property="og:locale" content="es_AR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Semana Santa 2026 en Mar del Plata | Hotel Diva"
+    />
+    <meta
+      name="twitter:description"
+      content="Paquete 3 noches $165.000 con desayuno buffet incluido. Garay 1630. Cupos limitados."
+    />
+    <meta
+      name="twitter:image"
+      content="https://hotel-diva-semana-santa.netlify.app/hero-1280.webp"
+    />
 
     <!-- Structured data (JSON-LD) -->
     <script type="application/ld+json">
@@ -223,7 +249,8 @@
         src="hero.webp"
         alt="Hotel en Mar del Plata cerca del mar con desayuno incluido"
         class="seo-hidden"
-        loading="lazy"
+        loading="eager"
+        fetchpriority="high"
       />
 
       <div class="hero-overlay" aria-hidden="true"></div>
@@ -366,6 +393,20 @@
             placeholder="Email"
             required
           />
+
+          <label for="habitacion">Tipo de habitación</label>
+          <select id="habitacion" name="habitacion" required>
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option value="Doble ($165.000 paquete 3 noches)">
+              Doble — $165.000 paquete 3 noches
+            </option>
+            <option value="Triple ($82.000 por noche)">
+              Triple — $82.000 por noche
+            </option>
+            <option value="Cuádruple ($100.000 por noche)">
+              Cuádruple — $100.000 por noche
+            </option>
+          </select>
 
           <button
             type="submit"
@@ -578,14 +619,17 @@
             const nombre = document.getElementById("nombre").value.trim();
             const telefono = document.getElementById("telefono").value.trim();
             const email = document.getElementById("email").value.trim();
+            const habitacion = document.getElementById("habitacion").value;
 
             // small validation
-            if (!nombre || !telefono) {
-              alert("Por favor completá nombre y teléfono para reservar.");
+            if (!nombre || !telefono || !habitacion) {
+              alert(
+                "Por favor completá nombre, teléfono y tipo de habitación para reservar.",
+              );
               return;
             }
 
-            const mensaje = `Hola, soy ${nombre}. Mi teléfono es ${telefono}. Mi email ${email}. Quiero reservar el paquete de Semana Santa 2026 en Hotel Diva.`;
+            const mensaje = `Hola, soy ${nombre}. Mi teléfono es ${telefono}. Mi email ${email}. Habitación: ${habitacion}. Quiero reservar el paquete de Semana Santa 2026 en Hotel Diva.`;
             window.open(
               `https://wa.me/5492235033585?text=${encodeURIComponent(mensaje)}`,
               "_blank",
